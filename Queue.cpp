@@ -74,7 +74,10 @@ T Queue<T>::topQ() const
 //returns the first element in the Queue<T>
 {
 	if(front != NULL)
+	{
+		cout << front->data << endl;
     	return front->data;
+	}
 	else
 		cout << "Empty queue" << endl;
 	return T();
@@ -90,27 +93,4 @@ template <class T>
 bool Queue<T>::isFull() const
 {
 	return queCount >= queSize;
-}
-
-template <>
-Student Queue<Student>::topQ() const
-{
-	if(front != NULL)
-	{
-    	front->data.printStudent();   
-    	return front->data;
-	}else
-		cout << "Empty Queue" << endl;
-	return Student();
-}
-template<>
-int Queue<int>::topQ() const
-{
-	if(front != NULL)
-	{
-		cout << front->data << endl;    
-		return front->data;
-	}else
-		cout << "Empty stack" << endl;
-	return -1;
 }

@@ -30,7 +30,7 @@ bool validateInput(int response, Queue<T>* queue, bool clearScreen)
         {
             case 1:
             {
-				cout << "new data" << endl;
+				//cout << "new data" << endl;
                 T* x = new T();
                 addObj(queue, x);
                 cout << (clearScreen?string(100, '\n'):"");
@@ -50,7 +50,7 @@ bool validateInput(int response, Queue<T>* queue, bool clearScreen)
             }
             case 4:
             {
-                cout << "back";
+                //cout << "back";
                 quit = true;
                 break;
             }
@@ -73,7 +73,8 @@ void addObj(Queue<int>* queue, int* x)
 
 void addObj(Queue<Student>*& queue, Student*& x)
 {
-    cout << "adding" << endl;
+    //cout << "adding" << endl;
+	x->inputData();
     queue->enQ(*x);
 }
 
